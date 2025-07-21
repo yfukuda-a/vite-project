@@ -1,6 +1,9 @@
 # ベースイメージとしてNode.jsを使用
 FROM node:22-slim
 
+# OSパッケージアップデート
+RUN apt update && apt upgrade -y
+
 # 作業ディレクトリを設定
 WORKDIR /app
 
